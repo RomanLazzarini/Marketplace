@@ -1,0 +1,85 @@
+/*Google Fonts*/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/*Pantalla principal*/
+#pantalla {
+  display: grid;
+  grid-template-columns: auto auto; /*Se definen 2 columnas*/
+  place-content: center;
+  grid-template-areas:
+    "buscador buscador" /*Texto a mostrar en cada columna*/
+    "offer-banner offer-banner"
+    "producto producto";
+}
+
+/*Caja contenedoras del grid principal pantalla*/
+.box {
+  border-style: solid;
+  border-width: 2px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/*Caja contenedoras del grid secundario productos*/
+.box-producto {
+  border-style: solid;
+  border-width: 1px;
+  margin: 10px;
+  padding: 10px;
+  place-content: center;
+  height: 200px;
+  width: 200px;
+}
+
+#buscador {
+  grid-area: buscador;
+}
+
+#offer-banner {
+  grid-area: offer-banner;
+  height: 225px;
+}
+
+#contenedor-productos {
+  grid-area: producto;
+}
+
+#contenedor-productos {
+  display: grid;
+  place-content: center;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "producto1 producto2"
+    "producto3 producto4";
+}
+
+#producto1 {
+  grid-area: producto1;
+}
+
+#producto2 {
+  grid-area: producto2;
+}
+
+#producto3 {
+  grid-area: producto3;
+}
+
+#producto4 {
+  grid-area: producto4;
+}
+
+#contenedor-productos img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+#offer-banner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
